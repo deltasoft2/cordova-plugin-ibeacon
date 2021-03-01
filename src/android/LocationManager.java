@@ -317,7 +317,7 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
             }
 
             final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-            builder.setTitle("This app needs location access");
+            builder.setTitle("eTMS Drive app needs location access");
             builder.setMessage("Please grant location access so this app can detect beacons.");
             builder.setPositiveButton(android.R.string.ok, null);
             builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
