@@ -322,8 +322,7 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
 		String alert5 = "4. To notify the user if the vehicle is Overspeeding";
 		String alert6 = " even when the app is closed or not in use.This data is NOT used to provide ads.";
 
-
-alertDialog.setMessage(alert1 +"\n"+ alert2 +"\n"+ alert3);   
+ 
             final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                     builder.setTitle("eTMS Drive needs location access");	
             builder.setMessage(alert1 +"\n"+ alert2 +"\n"+ alert3+"\n"+alert4 +"\n"+ alert5 +"\n"+ alert6);
