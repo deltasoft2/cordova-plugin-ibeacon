@@ -315,10 +315,18 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
                         "supported version of Android.");
                 return;
             }
+		String alert1 = "This app collects location data to enable :";
+		String alert2 = "1. Geo-fence based proximity alerts to Employees" ;
+		String alert3 = "2. Geo-fence based Trip Closure";
+		String alert4 = "3. Measure total distance covered during the trip";
+		String alert5 = "4. To notify the user if the vehicle is Overspeeding";
+		String alert6 = " even when the app is closed or not in use.This data is NOT used to provide ads.";
 
+
+alertDialog.setMessage(alert1 +"\n"+ alert2 +"\n"+ alert3);   
             final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                     builder.setTitle("eTMS Drive needs location access");	
-            builder.setMessage("This app collects location data to enable Geo-fence based proximity alerts to Employees,Geo-fence based Trip Closure, Measure total distance covered during the trip and to notify the user if the vehicle is Overspeeding even when the app is closed or not in use.This data is NOT used to provide ads.");
+            builder.setMessage(alert1 +"\n"+ alert2 +"\n"+ alert3+"\n"+alert4 +"\n"+ alert5 +"\n"+ alert6);
                builder.setPositiveButton(android.R.string.ok, null);
             builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @SuppressLint("NewApi")
